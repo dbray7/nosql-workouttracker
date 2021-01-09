@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 // Setting up Express App
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 
 app.use(morgan("dev"));
 
@@ -16,7 +16,7 @@ app.use(express.static('public'));
 
 // db mongo
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+    process.env.MONGODB_URI || 'mongodb+srv://dbray7:Soccer2020!@cluster0.ikz0t.mongodb.net/workout?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
